@@ -433,7 +433,7 @@
 "Reportagen & Dokumentationen": "Magazines / Reports / Documentary",
 "E-Sport": "Sports",
 "Kids": "Children's / Youth programs",
-"Heimatfilm": "Movie / Drama",
+"Heimatfilm": "Drama",
 "Kriminalserie": "Detective / Thriller",
 "Musiksendung": "Music / Ballet / Dance",
 "Romanze": "Romance",
@@ -483,12 +483,13 @@
 
 "Filme": "movie",
 "Serien": "Serien",
-"Unterhaltung\/Show": "show",
-"Dokus\/Magazine": "documentary",
+"Unterhaltung\/Show": "Show / Game show",
+"Dokus\/Magazine": "Magazines / Reports / Documentary",
 "Sport": "sports",
-"Kinder": "kids",
+"Kinder": "Children's / Youth programs",
 "Informationen\/Politik": "news",
-"Sonstiges": "other",
-"Unbekannt": "unknown",
-"None": "unknown"
+"Sonstiges": "Others",
+"Unbekannt": "Unknown",
+"None": ""
 }}
+
