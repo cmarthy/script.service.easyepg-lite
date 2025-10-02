@@ -92,6 +92,25 @@ def epg_main_converter(data, channels, settings, ch_id=None, genres={}):
             genre_list = []
             for role_item in list_item:
                 if role_item.get("Role", "None") == "Genre":
+                    match role_item.get("TargetIdentifier", "000")[0:3]:
+                        case "100":
+                            genre_list.append("Filme")
+                        case "200":
+                            genre_list.append("Serien")
+                        case "300":
+                            genre_list.append("Unterhaltung/Show")
+                        case "400":
+                            genre_list.append("Dokus/Magazine")
+                        case "500":
+                            genre_list.append("Sport")
+                        case "600":
+                            genre_list.append("Kinder")
+                        case "700":
+                            genre_list.append("Information/Politik")
+                        case "800":
+                            genre_list.append("Sonstiges")
+                        case _:
+                            genre_list.append("Unbekannt")
                     genre_list.append(genres.get(role_item["TargetIdentifier"]))
             return genre_list if len(genre_list) > 0 else []
         return []
