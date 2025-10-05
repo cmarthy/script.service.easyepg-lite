@@ -88,11 +88,33 @@ def epg_main_converter(item, data, channels, settings, ch_id=None, genres={}):
         return None
 
     def get_genres(list_item):
-        if list_item and len(list_item) > 0:
+       if list_item and len(list_item) > 0:
             genre_list = []
             for role_item in list_item:
                 if role_item.get("Role", "None") == "Genre":
-                    genre_list.append(genres.get(role_item["TargetIdentifier"]))
+                    match role_item.get("TargetIdentifier", "000")[0:3]:
+                        case "100":
+                            genre_list.append("swcch_Filme")
+                        case "200":
+                            genre_list.append("swcch_Serien")
+                        case "300":
+                            genre_list.append("swcch_Unterhaltung/Show")
+                        case "400":
+                            genre_list.append("swcch_Dokus/Magazine")
+                        case "500":
+                            genre_list.append("swcch_Sport")
+                        case "600":
+                            genre_list.append("swcch_Kinder")
+                        case "700":
+                            genre_list.append("swcch_Information/Politik")
+                        case "800":
+                            genre_list.append("swcch_Sonstiges")
+                        case _:
+                            # Do nothing
+                    if role_item.get("TargetIdentifier", "000.199")[4:7] == "199" or genres.get(role_item["TargetIdentifier"], "") == "":
+                            # Do nothing
+                    else:                    
+                        genre_list.append("swcch_" + genres.get(role_item["TargetIdentifier"]))
             return genre_list if len(genre_list) > 0 else []
         return []
 
