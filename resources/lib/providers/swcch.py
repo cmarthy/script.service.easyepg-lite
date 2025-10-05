@@ -88,7 +88,7 @@ def epg_main_converter(item, data, channels, settings, ch_id=None, genres={}):
         return None
 
     def get_genres(list_item):
-       if list_item and len(list_item) > 0:
+        if list_item and len(list_item) > 0:
             genre_list = []
             for role_item in list_item:
                 if role_item.get("Role", "None") == "Genre":
