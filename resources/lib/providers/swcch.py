@@ -111,8 +111,10 @@ def epg_main_converter(item, data, channels, settings, ch_id=None, genres={}):
                             genre_list.append("swcch_Sonstiges")
                         case _:
                             # Do nothing
+                            pass
                     if role_item.get("TargetIdentifier", "000.199")[4:7] == "199" or genres.get(role_item["TargetIdentifier"], "") == "":
                             # Do nothing
+                            pass
                     else:                    
                         genre_list.append("swcch_" + genres.get(role_item["TargetIdentifier"]))
             return genre_list if len(genre_list) > 0 else []
