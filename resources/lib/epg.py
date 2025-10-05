@@ -336,7 +336,7 @@ class Grabber():
 
                             # CREDITS
                             if (len(director) > 0 or len(actor) > 0) and \
-                                (self.user_db.main["settings"]["rm"] != "none" or self.user_db.main["settings"]["rm"] != "add-info"):
+                                (self.user_db.main["settings"]["rm"] != "none" and self.user_db.main["settings"]["rm"] != "add-info"):
                                 program["credits"] = {"director": [], "actor": []}
 
                                 for item in director:
