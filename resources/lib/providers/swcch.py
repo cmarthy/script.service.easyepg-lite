@@ -96,11 +96,11 @@ def epg_main_converter(item, data, channels, settings, ch_id=None, genres={}):
                         case "100":
                             genre_list.append("swcch_Filme")
                         case "200":
-                            genre_list.append("swcch_Serien")
+                            pass
                         case "300":
-                            genre_list.append("swcch_Unterhaltung/Show")
+                            pass
                         case "400":
-                            genre_list.append("swcch_Dokus/Magazine")
+                            pass
                         case "500":
                             genre_list.append("swcch_Sport")
                         case "600":
@@ -108,12 +108,10 @@ def epg_main_converter(item, data, channels, settings, ch_id=None, genres={}):
                         case "700":
                             genre_list.append("swcch_Information/Politik")
                         case "800":
-                            genre_list.append("swcch_Sonstiges")
-                        case _:
-                            # Do nothing
                             pass
-                    if role_item.get("TargetIdentifier", "000.199")[4:7] == "199" or genres.get(role_item["TargetIdentifier"], "") == "":
-                            # Do nothing
+                        case _:
+                            pass
+                    if genres.get(role_item["TargetIdentifier"], "") == "":
                             pass
                     else:                    
                         genre_list.append("swcch_" + genres.get(role_item["TargetIdentifier"]))
