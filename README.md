@@ -1,6 +1,7 @@
 # easyepg lite
 
 This tool retrieves the EPG data provided by Gracenote (TMS) and converts the JSON files into a single XMLTV file.
+This fork includes a dedicated handling of the (german) swcch-genres and is optimized for Jellyfin.
 
 ### Disclaimer
 
