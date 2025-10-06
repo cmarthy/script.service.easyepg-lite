@@ -295,7 +295,7 @@ class Grabber():
                                         else:
                                             desc_line = f"{star_rating if star_rating != '' else 'Star'} Rating: {star_desc_line}"
                                     if desc_line != "":
-                                        desc = f"{desc_line}\n{desc}"
+                                        desc = f"{desc_line}\n\n{desc}"
 
                                 # SHOW CREDITS IN DESCRIPTION
                                 if self.user_db.main["settings"]["rm"] == "add-cast" or \
@@ -309,7 +309,7 @@ class Grabber():
                                     if len(director) > 0:
                                         for item in director:
                                             if director_line != "":
-                                                director_line = f"{director_line}\n{item}"
+                                                director_line = f"{director_line}, {item}"
                                             else:
                                                 director_line = item
 
@@ -317,7 +317,7 @@ class Grabber():
                                     if len(actor) > 0:
                                         for item in actor:
                                             if actor_line != "":
-                                                actor_line = f"{actor_line}\n{item}"
+                                                actor_line = f"{actor_line}, {item}"
                                             else:
                                                 actor_line = item
 
