@@ -496,10 +496,10 @@
 "Sports": "Sports",
 "Movie": "Movie / Drama",
   
-"swcch_Filme": "Movie",
+"swcch_Filme": "Movie / Drama",
 "swcch_Sport": "Sports",
-"swcch_Kinder": "Children",
-"swcch_Information\/Politik": "News",
+"swcch_Kinder": "Children's / Youth programs",
+"swcch_Information\/Politik": "News / Current Affairs",
 
 "swcch_Abenteuer": "Abenteuer",
 "swcch_Action": "Action",
@@ -513,7 +513,7 @@
 "swcch_Billard\/Snooker": "Billard/Snooker",
 "swcch_Biografie": "Biografie",
 "swcch_Boxen": "Boxen",
-"swcch_Comedy": "Comedy",
+"swcch_Comedy": "Komödie",
 "swcch_Curling": "Curling",
 "swcch_Darts": "Darts",
 "swcch_Doku-Soap": "Doku-Soap",
